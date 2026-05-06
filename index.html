@@ -31,7 +31,7 @@
             <h2>Nuestros Servicios</h2>
             <div class="contenedorCartas">
                 <article>
-                    <img src="servicio1.png" alt="Primer plano de una estación de desarrollo mostrando código siendo optimizado">
+                    <img src="servicios/servicio1.png" alt="Primer plano de una estación de desarrollo mostrando código siendo optimizado">
                     <h3>Optimización de Software</h3>
                     <p>Mejoramos el rendimiento y la estabilidad de tus sistemas críticos de software 
                         empresariales. Limpieza profunda de SO y configuración avanzada.</p>
@@ -39,7 +39,7 @@
                 </article>
 
                 <article>
-                    <img src="servicio2.jpg" alt="Pantallas con diagramas de arquitectura web y entornos de programación limpios">
+                    <img src="servicios/servicio2.jpg" alt="Pantallas con diagramas de arquitectura web y entornos de programación limpios">
                     <h3>Desarrollo de Software a Medida</h3>
                     <p>Creamos soluciones y aplicaciones web personalizadas adaptadas a las necesidades 
                         específicas de tu negocio, enfocadas en escalabilidad y seguridad.</p>
@@ -47,7 +47,7 @@
                 </article>
 
                 <article>
-                    <img src="servicio3.jfif" alt="Consolas de monitoreo, mapas de red y sistemas de tickets de soporte técnico">
+                    <img src="servicios/servicio3.jfif" alt="Consolas de monitoreo, mapas de red y sistemas de tickets de soporte técnico">
                     <h3>Monitoreo Global & Soporte 24/7</h3>
                     <p>Monitoreo proactivo continuo de tu red y sistemas, con asistencia técnica 
                         inmediata ante cualquier incidencia desde nuestro Centro de Operaciones.</p>
@@ -55,7 +55,7 @@
                 </article>
 
                 <article>
-                    <img src="servicio4.jfif" alt="Pantalla enfocada en la gestión de infraestructura en la nube y optimización de bases de datos">
+                    <img src="servicios/servicio4.jfif" alt="Pantalla enfocada en la gestión de infraestructura en la nube y optimización de bases de datos">
                     <h3>Servicios de Cloud & Infraestructura</h3>
                     <p>Gestión eficiente de infraestructura en la nube, servidores y bases de datos 
                         para garantizar la alta disponibilidad y seguridad de tu información.</p>
@@ -67,24 +67,203 @@
             
             <!-- Acá irán las cards con Flexbox (Punto 4) -->
         </section>
-
+        <!--RESENIAS-->
         <section id="resenas">
             <h2>Reseñas de Clientes</h2>
+            <div class="contenedor-grilla-resenas">
+                
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"La migración de nuestros servidores a la nube fue impecable. TechSolutions garantizó cero tiempo de inactividad y nuestra infraestructura ahora es muchísimo más rápida."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente1.jpg" alt="Foto de Carlos Mendoza" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Carlos Mendoza</h4>
+                            <span>Dir. de Operaciones, Logística Global</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐</div>
+                    <blockquote>"El sistema web es robusto y cumple todo lo pedido. Le quito una estrella porque el proyecto se extendió un par de semanas más de lo planificado, pero el resultado final valió la pena."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente2.jpg" alt="Foto de Laura Santillán" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Laura Santillán</h4>
+                            <span>CEO, Finanzas Sur</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐</div>
+                    <blockquote>"El servicio de monitoreo funciona bien y las alertas son precisas. Sin embargo, al principio la comunicación con el equipo de soporte fue un poco lenta hasta que aceitamos los procesos."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente3.jpg" alt="Foto de Martín Ferrero" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Martín Ferrero</h4>
+                            <span>Gte. de Sistemas, Grupo Industrial</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"Hicieron una refactorización y optimización de nuestro código en Python que literalmente salvó nuestro sistema de colapsar. Redujeron los tiempos de carga a la mitad."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente4.jpg" alt="Foto de Ana Clara Silva" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Ana Clara Silva</h4>
+                            <span>CTO, RetailTech</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐</div>
+                    <blockquote>"La arquitectura de base de datos que armaron es muy segura. Nos costó un poco adaptarnos al nuevo panel de gestión al principio, pero nos dieron una buena capacitación."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente5.jpg" alt="Foto de Roberto Gómez" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Roberto Gómez</h4>
+                            <span>Gerente de IT, Banco Regional</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"El soporte 24/7 nos salvó durante un evento masivo. Tuvimos un pico de tráfico inesperado a las 3 AM y escalaron los servidores automáticamente. El mejor aliado."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente6.jpg" alt="Foto de Sofía Lorenzo" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Sofía Lorenzo</h4>
+                            <span>Directora E-commerce, ModaYa</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐</div>
+                    <blockquote>"La API que desarrollaron se integra perfecto con nuestro CRM. El código es muy limpio, pero la documentación técnica nos llegó incompleta y tuvimos que pedir varias revisiones."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente7.jpg" alt="Foto de Julián Álvarez" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Julián Álvarez</h4>
+                            <span>Lead Developer, StartUp Hub</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐</div>
+                    <blockquote>"Muy buena implementación de infraestructura. Hubo algunos roces y un par de bugs durante el despliegue inicial en producción, pero lo resolvieron rápido y con profesionalismo."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente8.jpg" alt="Foto de Elena Rossi" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Elena Rossi</h4>
+                            <span>Gerente de Operaciones, MediaGroup</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-resena">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"Valoro mucho cuando una consultora no solo tira código, sino que aporta arquitectura real. Nos ayudaron a migrar a un entorno MVC con C# con resultados increíbles a nivel rendimiento."</blockquote>
+                    
+                    <div class="perfil-cliente">
+                        <img src="clientes/cliente9.jpg" alt="Foto de Diego Torres" class="foto-resena">
+                        <div class="datos-cliente">
+                            <h4>Diego Torres</h4>
+                            <span>Fundador, Intech Agro</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
             <!-- Acá irá la grilla con Grid (Punto 4) -->
         </section>
 
         <section id="contacto">
             <h2>Consultas y Presupuestos</h2>
-            <!-- Acá irá el formulario con Formspree (Punto 2) -->
-        </section>
+            <p>¿Necesitás optimizar tu software, desarrollar a medida o migrar a la nube? Dejanos tu mensaje y nos pondremos en contacto a la brevedad.</p>
+            
+            <form action="https://formspree.io/f/mwvyqogl" method="POST" class="formulario-contacto">
+                
+                <div class="grupo-form">
+                    <label for="nombre">Nombre o Empresa:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Logística Sur S.A.">
+                </div>
 
+                <div class="grupo-form">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="contacto@empresa.com">
+                </div>
+
+                <div class="grupo-form">
+                    <label for="servicio">Servicio de interés:</label>
+                    <select id="servicio" name="Servicio Solicitado" required>
+                        <option value="" disabled selected>Seleccioná una opción...</option>
+                        <option value="Desarrollo a Medida">Desarrollo de Software a Medida</option>
+                        <option value="Optimizacion">Optimización de Código / Bases de Datos</option>
+                        <option value="Cloud">Cloud & Infraestructura</option>
+                        <option value="Soporte">Monitoreo y Soporte 24/7</option>
+                        <option value="Otro">Otra consulta</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensaje">Detalles del proyecto o consulta:</label>
+                    <textarea id="mensaje" name="Mensaje" rows="5" required placeholder="Contanos brevemente qué necesitás resolver..."></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar Consulta</button>
+            </form>
+        </section>
+    
     </main>
 
     <!-- Pie de página (Punto 1) -->
     <footer>
-        <p>&copy; 2026 - TechSolutions IT - Ezequiel Acosta</p>
-    </footer>
+        <div class="contenedor-footer">
+            
+            <div class="columna-footer">
+                <h3>TechSolutions IT</h3>
+                <p>Brindamos soluciones tecnológicas de alto rendimiento enfocadas en la escalabilidad, seguridad y optimización de procesos digitales para empresas modernas.</p>
+            </div>
 
+            <div class="columna-footer">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Servicios</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p>📍 Grand Bourg, Buenos Aires</p>
+                <p>📧 contacto@techsolutions.com.ar</p>
+                <p>📞 +54 11 4889-7822</p>
+            </div>
+
+        </div>
+
+        <div class="footer-inferior">
+            <p>&copy; 2026 - TechSolutions IT - Desarrollado por Ezequiel Acosta</p>
+        </div>
+    </footer>
 
 </body>
 </html>
