@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image: url('fondo.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: #f4f7f6;
+    color: #333333; 
+    line-height: 1.6;
+}
+/* CBEZERA */
+header {
+    background-color: #0a192f; 
+    padding: 1rem 5%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: #00b4d8;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none; 
+    display: flex;
+    gap: 2rem; 
+}
+
+nav a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00b4d8; 
+}
+
+/*HERO*/
+#inicio img {
+    width: 100%;
+    height: 70vh; 
+    object-fit: cover; 
+    display: block;
+}
+
+
+section {
+    padding: 4rem 5%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0a192f; 
+    margin-bottom: 3rem;
+}
+
+/* TARJETAS SERVICIOS FLEX*/
+.contenedorCartas {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 2rem; 
+}
+
+.contenedorCartas article {
+    background-color: #f1f1f1;
+    width: 280px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    text-align: center; 
+    padding-bottom: 2rem; 
+    transition: transform 0.3s ease; 
+}
+.contenedorCartas article:hover {
+    transform: translateY(-10px); 
+}
+
+.contenedorCartas article img {
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+}
+
+.contenedorCartas article h3 {
+    color: #0a192f; 
+    font-size: 1.2rem; 
+    margin: 1.5rem 0 1rem 0; 
+    padding: 0 1rem; 
+}
+
+.contenedorCartas article p {
+    color: #555555; 
+    font-size: 0.95rem; 
+    margin-bottom: 1.5rem; 
+    padding: 0 1.5rem; 
+}
+
+.contenedorCartas article a {
+    display: inline-block; 
+    background-color: #00b4d8; 
+    color: #ffffff; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+}
+
+.contenedorCartas article a:hover {
+    background-color: #0a192f; 
+}
+
+/*Resenias*/
+.contenedor-grilla-resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.tarjeta-resena {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.estrellas {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-resena blockquote {
+    font-style: italic;
+    color: #555555;
+    margin-bottom: 2rem;
+}
+
+.perfil-cliente {
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+}
+
+.foto-resena {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.datos-cliente h4 {
+    color: #0a192f;
+    font-size: 1rem;
+    margin: 0; 
+}
+
+.datos-cliente span {
+    color: #777777;
+    font-size: 0.85rem;
+}
+
+/*FORMULARIO*/
+
+#contacto {
+    background-color: #0a192f; 
+    color: #ffffff; 
+}
+
+#contacto h2 {
+    color: #00b4d8; 
+}
+
+.formulario-contacto {
+    background-color: #ffffff;
+    color: #333333;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0a192f;
+}
+
+.grupo-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.grupo-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.grupo-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#contacto p {
+    text-align: center;
+    margin-bottom: 3rem; 
+}
+
+.boton-enviar {
+    width: 100%; 
+    background-color: #00b4d8; 
+    color: #ffffff; 
+    border: none; 
+    padding: 1rem; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.boton-enviar:hover {
+    background-color: #008eb0; 
+}
+
+/*PIE DE PAGINA*/
+footer {
+    background-color: #acb2b9; 
+    color: #333333;
+    padding-top: 3rem;
+}
+
+/* La caja que contiene las 3 columnas */
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    padding-bottom: 3rem;
+}
+
+
+.columna-footer {
+    flex: 1;
+}
+
+
+.columna-footer h3 {
+    color: #0a192f;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+
+.columna-footer ul {
+    list-style: none;
+}
+
+
+.columna-footer a {
+    color: #555555; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+
+.columna-footer a:hover {
+    color: #00b4d8; 
+    text-decoration: underline;
+}
+
+
+.footer-inferior {
+    background-color: #030407; 
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #757373;
+}
