@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-image: url('fondo.jfif');
+    font-family: 'Inter','Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image: url("fondo.jfif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -15,7 +15,7 @@ body {
     color: #333333; 
     line-height: 1.6;
 }
-/* CBEZERA */
+/* CABECERA */
 header {
     background-color: #0a192f; 
     padding: 1rem 5%; 
@@ -56,7 +56,8 @@ nav a:hover {
 .hero-video-contenedor {
     position: relative;
     width: 100%;
-    height: 70vh; 
+    height: calc(70vh - 80px);
+    margin-top: 80px;
     overflow: hidden;
     display: flex;
     align-items: center;

@@ -1,13 +1,30 @@
-# TechSolutions IT - Proyecto Pre-Entrega
+# TechSolutions IT - Consultoría Tecnológica
 
-Este es un proyecto web corporativo desarrollado para la pre-entrega del curso de Talento Tech. El propósito de esta Landing Page es presentar los servicios de **TechSolutions IT**, una consultora tecnológica orientada a infraestructura y software, demostrando la correcta aplicación de HTML semántico y preparando la base para un diseño responsivo.
+Este proyecto es una Landing Page corporativa desarrollada para la pre-entrega del curso **Talento Tech**. La web presenta a **TechSolutions IT**, una empresa dedicada a brindar soluciones de software e infraestructura de alto rendimiento, aplicando las mejores prácticas de maquetación moderna.
 
-## Características y Estructura del Proyecto
+## 🚀 Características Técnicas
 
-* **HTML Semántico:** Implementación estructurada utilizando etiquetas modernas (`<header>`, `<main>`, `<section>`, `<article>`, `<blockquote>`, `<footer>`) para mejorar la accesibilidad y el SEO.
-* **Sección de Servicios (Flexbox):** Catálogo de soluciones IT (Optimización, Desarrollo a Medida, Monitoreo Global y Cloud) maquetado con `<article>` y preparado para ser alineado utilizando CSS Flexbox (Punto de rúbrica).
-* **Testimonios de Clientes (CSS Grid):** Una completa sección de reseñas corporativas con 9 testimonios, estructurada de manera óptima para ser visualizada mediante una cuadrícula con CSS Grid (Punto de rúbrica).
-* **Formulario Funcional:** Sección de "Consultas y Presupuestos" que incluye un formulario detallado con selectores de servicios, totalmente conectado y operativo a través de **Formspree** para la recepción de correos reales (Punto de rúbrica).
+El proyecto fue construido bajo los pilares de la semántica, la organización y el diseño adaptable:
+
+* **HTML5 Semántico:** Uso riguroso de etiquetas estructurales (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`) para garantizar un código limpio, accesible y optimizado para SEO.
+* **Diseño con Flexbox:** La sección de **Servicios** utiliza Flexbox para organizar las tarjetas de soluciones IT de forma armoniosa y flexible.
+* **Grillas Dinámicas con CSS Grid:** La sección de **Reseñas de Clientes** implementa un sistema de cuadrícula responsivo que se adapta automáticamente al ancho de la pantalla.
+* **Multimedia Integrada:** Implementación de un **Video Hero** en segundo plano con controles de reproducción automática y silencio para una experiencia de usuario moderna.
+* **Formulario Operativo:** Sección de contacto totalmente funcional integrada con **Formspree**, permitiendo la recepción de consultas reales directamente por correo electrónico.
+
+## 🛠️ Tecnologías Utilizadas
+
+* **HTML5:** Estructura y contenido semántico.
+* **CSS3:** Estilos personalizados, incluyendo variables de color, Flexbox, Grid y efectos de transición.
+* **Formspree:** Servicio para el procesamiento del formulario de contacto.
+
+## 📂 Estructura del Proyecto
+
+* `index.html`: Estructura principal de la landing page.
+* `style.css`: Hoja de estilos con la configuración de diseño y animaciones.
+* `/servicios`: Imágenes correspondientes a las tarjetas de servicios IT.
+* `/clientes`: Fotografías de perfil para la sección de testimonios.
 
 ---
 **Desarrollado por:** Ezequiel Acosta
+**Ubicación:** Grand Bourg, Buenos Aires.
