@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Optimización de Software",
+        "precio": 45000,
+        "imagen": "servicios/servicio1.png"
+    },
+    {
+        "id": 2,
+        "titulo": "Desarrollo a Medida",
+        "precio": 120000,
+        "imagen": "servicios/servicio2.png"
+    },
+    {
+        "id": 3,
+        "titulo": "Soporte 24/7",
+        "precio": 35000,
+        "imagen": "servicios/servicio3.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Cloud & Infraestructura",
+        "precio": 85000,
+        "imagen": "servicios/servicio4.jpeg"
+    }
+]
