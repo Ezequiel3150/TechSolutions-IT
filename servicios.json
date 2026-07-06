@@ -2,24 +2,28 @@
     {
         "id": 1,
         "titulo": "Optimización de Software",
+        "descripcion": "Mejoramos el rendimiento y la estabilidad de tus sistemas críticos de software empresariales. Limpieza profunda de SO y configuración avanzada.",
         "precio": 45000,
         "imagen": "servicios/servicio1.png"
     },
     {
         "id": 2,
-        "titulo": "Desarrollo a Medida",
+        "titulo": "Desarrollo de Software a Medida",
+        "descripcion": "Creamos soluciones y aplicaciones web personalizadas adaptadas a las necesidades específicas de tu negocio, enfocadas en escalabilidad y seguridad.",
         "precio": 120000,
         "imagen": "servicios/servicio2.png"
     },
     {
         "id": 3,
-        "titulo": "Soporte 24/7",
+        "titulo": "Monitoreo Global & Soporte 24/7",
+        "descripcion": "Monitoreo proactivo continuo de tu red y sistemas, con asistencia técnica inmediata ante cualquier incidencia desde nuestro Centro de Operaciones.",
         "precio": 35000,
         "imagen": "servicios/servicio3.jpg"
     },
     {
         "id": 4,
-        "titulo": "Cloud & Infraestructura",
+        "titulo": "Servicios de Cloud & Infraestructura",
+        "descripcion": "Gestión eficiente de infraestructura en la nube, servidores y bases de datos para garantizar la alta disponibilidad y seguridad de tu información.",
         "precio": 85000,
         "imagen": "servicios/servicio4.jpeg"
     }

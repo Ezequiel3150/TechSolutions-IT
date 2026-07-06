@@ -57,4 +57,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         }
     });
+    
+    const contenedorServicios = document.getElementById('contenedor-servicios');
+
+    const obtenerServicios = async () => {
+        try {
+            const respuesta = await fetch('servicios.json');
+            const servicios = await respuesta.json();
+
+            servicios.forEach(servicio => {
+                
+                const tarjeta = document.createElement('article');
+                
+                tarjeta.innerHTML = `
+                    <img src="${servicio.imagen}" alt="${servicio.titulo}">
+                    <h3>${servicio.titulo}</h3>
+                    <p>${servicio.descripcion}</p>
+                    <p style="font-weight: bold; color: #00b4d8; font-size: 1.2rem; margin-bottom: 1rem;">
+                        $${servicio.precio.toLocaleString('es-AR')}
+                    </p>
+                    <button class="btn-agregar" data-id="${servicio.id}" style="background-color: #00b4d8; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 80%; margin-bottom: 1rem;">
+                        Añadir al carrito
+                    </button>
+                `;
+
+                contenedorServicios.appendChild(tarjeta);
+            });
+
+        } catch (error) {
+            console.error("Hubo un error al cargar los servicios:", error);
+            contenedorServicios.innerHTML = '<p style="text-align:center;">Error al cargar los servicios disponibles.</p>';
+        }
+    };
+
+    obtenerServicios();
 });
