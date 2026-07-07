@@ -91,4 +91,117 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     obtenerServicios();
+    const botonAbrirCarrito = document.getElementById('abrir-carrito');
+    const botonCerrarCarrito = document.getElementById('cerrar-carrito');
+    const modalCarrito = document.getElementById('modal-carrito');
+
+    
+    botonAbrirCarrito.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        modalCarrito.classList.add('carrito-abierto');
+    });
+
+    botonCerrarCarrito.addEventListener('click', () => {
+        modalCarrito.classList.remove('carrito-abierto');
+    });
+    
+    let carrito = JSON.parse(localStorage.getItem('carritoTechSolutions')) || [];
+    
+    const listaCarritoDOM = document.getElementById('lista-carrito');
+    const contadorCarritoDOM = document.getElementById('contador-carrito');
+    const precioTotalDOM = document.getElementById('precio-total');
+
+    const actualizarCarrito = () => {
+        listaCarritoDOM.innerHTML = ''; 
+
+        if (carrito.length === 0) {
+            listaCarritoDOM.innerHTML = '<p style="text-align: center; color: #777;">El carrito está vacío.</p>';
+            contadorCarritoDOM.textContent = 0;
+            precioTotalDOM.textContent = '0';
+        } else {
+            let totalAcumulado = 0;
+            let cantidadTotal = 0;
+
+            carrito.forEach((producto) => {
+                totalAcumulado += producto.precio * producto.cantidad;
+                cantidadTotal += producto.cantidad;
+
+                const itemCarrito = document.createElement('div');
+                itemCarrito.style.cssText = "display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 10px;";
+                
+                itemCarrito.innerHTML = `
+                    <div style="flex:1;">
+                        <h4 style="font-size: 0.9rem; margin:0; color: #0a192f;">${producto.titulo}</h4>
+                        <p style="margin:0; font-size: 0.8rem; color: #777;">$${producto.precio.toLocaleString('es-AR')}</p>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <button class="btn-restar" data-id="${producto.id}" style="padding: 2px 8px; cursor: pointer;">-</button>
+                        <span style="font-weight:bold;">${producto.cantidad}</span>
+                        <button class="btn-sumar" data-id="${producto.id}" style="padding: 2px 8px; cursor: pointer;">+</button>
+                        <button class="btn-eliminar" data-id="${producto.id}" style="background-color: #d9534f; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; margin-left: 10px;">X</button>
+                    </div>
+                `;
+                listaCarritoDOM.appendChild(itemCarrito);
+            });
+
+            contadorCarritoDOM.textContent = cantidadTotal;
+            precioTotalDOM.textContent = totalAcumulado.toLocaleString('es-AR');
+        }
+
+        localStorage.setItem('carritoTechSolutions', JSON.stringify(carrito));
+    };
+
+    contenedorServicios.addEventListener('click', async (e) => {
+        if (e.target.classList.contains('btn-agregar')) {
+            const idServicioClickeado = parseInt(e.target.dataset.id);
+            
+            const respuesta = await fetch('servicios.json');
+            const serviciosDB = await respuesta.json();
+            const servicioEncontrado = serviciosDB.find(serv => serv.id === idServicioClickeado);
+
+            const existeEnCarrito = carrito.find(item => item.id === idServicioClickeado);
+            
+            if (existeEnCarrito) {
+                existeEnCarrito.cantidad++; 
+            } else {
+                carrito.push({
+                    id: servicioEncontrado.id,
+                    titulo: servicioEncontrado.titulo,
+                    precio: servicioEncontrado.precio,
+                    cantidad: 1
+                });
+            }
+            
+            alert(`¡Se añadió "${servicioEncontrado.titulo}" al carrito!`);
+            actualizarCarrito();
+        }
+    });
+
+    listaCarritoDOM.addEventListener('click', (e) => {
+        const idProducto = parseInt(e.target.dataset.id);
+        
+        if (e.target.classList.contains('btn-sumar')) {
+            const producto = carrito.find(item => item.id === idProducto);
+            producto.cantidad++;
+            actualizarCarrito();
+        }
+
+        if (e.target.classList.contains('btn-restar')) {
+            const producto = carrito.find(item => item.id === idProducto);
+            if (producto.cantidad > 1) {
+                producto.cantidad--;
+            } else {
+                carrito = carrito.filter(item => item.id !== idProducto);
+            }
+            actualizarCarrito();
+        }
+
+        if (e.target.classList.contains('btn-eliminar')) {
+            carrito = carrito.filter(item => item.id !== idProducto);
+            actualizarCarrito();
+        }
+    });
+
+    actualizarCarrito();
 });
