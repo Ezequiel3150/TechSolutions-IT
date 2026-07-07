@@ -18,6 +18,7 @@
                 <li><a href="#productos">Servicios</a></li>
                 <li><a href="#resenas">Reseñas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" id="abrir-carrito">Carrito <span id="contador-carrito">0</span></a></li>
             </ul>
         </nav>
     </header>
@@ -239,6 +240,22 @@
             <p>&copy; 2026 - TechSolutions IT - Desarrollado por Ezequiel Acosta</p>
         </div>
     </footer>
+    <!-- CARRITO -->
+    <aside id="modal-carrito">
+        <div class="carrito-header">
+            <h2>Tu Carrito</h2>
+            <button id="cerrar-carrito">X</button>
+        </div>
+        
+        <div class="carrito-contenedor-items" id="lista-carrito">
+            <p style="text-align: center; color: #777;">El carrito está vacío.</p>
+        </div>
+        
+        <div class="carrito-footer">
+            <p>Total: $<span id="precio-total">0</span></p>
+            <button id="btn-comprar">Finalizar Compra</button>
+        </div>
+    </aside>
 <script src="script.js"></script>
 </body>
 </html>
