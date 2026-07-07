@@ -136,10 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <button class="btn-restar" data-id="${producto.id}" style="padding: 2px 8px; cursor: pointer;">-</button>
+                        <button class="btn-restar" data-id="${producto.id}" aria-label="Restar una unidad" style="padding: 2px 8px; cursor: pointer;">-</button>
                         <span style="font-weight:bold;">${producto.cantidad}</span>
-                        <button class="btn-sumar" data-id="${producto.id}" style="padding: 2px 8px; cursor: pointer;">+</button>
-                        <button class="btn-eliminar" data-id="${producto.id}" style="background-color: #d9534f; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; margin-left: 10px;">X</button>
+                        <button class="btn-sumar" data-id="${producto.id}" aria-label="Sumar una unidad" style="padding: 2px 8px; cursor: pointer;">+</button>
+                        <button class="btn-eliminar" data-id="${producto.id}" aria-label="Eliminar producto del carrito" style="background-color: #d9534f; color: white; border: none; padding: 3px 8px; border-radius: 4px; cursor: pointer; margin-left: 10px;">X</button>
                     </div>
                 `;
                 listaCarritoDOM.appendChild(itemCarrito);
@@ -204,4 +204,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     actualizarCarrito();
+
+    const btnComprar = document.getElementById('btn-comprar');
+
+    btnComprar.addEventListener('click', () => {
+        if (carrito.length === 0) {
+            alert('Tu carrito está vacío. ¡Agregá algún servicio primero!');
+            return; 
+        }
+        alert('¡Compra finalizada con éxito! El servicio ya es tuyo.');
+
+        carrito = [];
+
+        actualizarCarrito();
+
+        modalCarrito.classList.remove('carrito-abierto');
+    });
 });
